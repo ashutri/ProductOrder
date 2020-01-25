@@ -1,0 +1,12 @@
+<h1>Shopping Mart</h1>
+<a *ngFor="let product of products" class="col-1-4" routerLink="/product/{{product.id}}">
+    <img src={{product.image}} alt={{product.name}}>
+    <div class="module project">
+    <h3>{{product.name}}</h3>
+    <h2>{{product.price}}</h2>
+    <div class="available" *ngIf="product.availability; else elseBlock">Available</div>
+    <ng-template class="notAvailable" #elseBlock>Out of Stock</ng-template>
+    </div>
+    <h3>Add to Cart</h3>
+</a>
+<app-order></app-order>

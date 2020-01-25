@@ -1,0 +1,62 @@
+<div class="container">
+ <div class="row">
+ <div class="col">
+ <section>
+ <header class="header">
+ <div class="row">
+ <div class="col-md-2">
+ <form name="prodForm">
+ <table>
+  <tr>
+ <th colspan="2">Add Customer</th>
+ </tr>
+ <tr>
+ <td>FirstName:</td>
+ <td><input id="firstName" name="firstName" ></td>
+ </tr>
+ <tr>
+ <td>Phone No:</td>
+ <td><input id="phoneNo" name="phoneNo"></td>
+ </tr>
+ <tr>
+ <td>Email:</td>
+ <td><input id="email" name="email"></td>
+ </tr>
+ <tr>
+ <td colspan="2"> <button type="button" (click)="createCustomer()" class="blue-button">submit</button></td>
+ </tr>
+ </table>
+ </form>
+ </div>
+ </div>
+</header>
+ </section>
+<section class="main">
+<table class="table">
+ <thead>
+ <tr>
+ <th>#</th>
+ <th>First Name</th>
+ <th>Phone No</th>
+ <th>Email</th>
+ <th></th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr *ngFor="let customer of customers">
+ <th scope="row">{{customer.id}}</th>
+ <td>{{customer.firstName}}</td>
+ <td>{{customer.phoneNo}}</td>
+ <td>{{customer.email}}</td>
+ <td>
+ <button type="button" class="btn btn-danger" (click)="deleteCustomer(customer)">Delete</button>
+ </td>
+ </tr>
+</tbody>
+ </table>
+ </section>
+ </div>
+ </div>
+</div>
+
+<button (click)="goBack()"><= Back</button>
