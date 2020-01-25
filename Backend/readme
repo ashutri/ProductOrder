@@ -1,0 +1,4 @@
+After importing the .war into and IDE 
+
+1. right click on project and click on run as 
+2. In goals right spring-boot:run
